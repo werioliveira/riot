@@ -1,6 +1,6 @@
 import {getPlayerInfo, getRankPlayer, lastMatch, getMatch} from '../index'
 import {Player, Ranking} from '../models/User'
-import {Request, Response} from 'express'
+import {request, Request, Response} from 'express'
 
 
     function getPlayer(req: Request,res: Response){
@@ -61,12 +61,15 @@ import {Request, Response} from 'express'
        //return res.json(PlayerInfo)
     }
 
-    
+    function index(req: Request, res: Response){
+            return res.json('Digite o Nome após a / do url')
+    }
     function getPlayerRank(req: Request, res: Response){
 
     }
 export {
     getPlayer,
-    getPlayerRank
+    getPlayerRank,
+    index
 }
 

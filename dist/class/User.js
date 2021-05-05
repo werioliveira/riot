@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getPlayerRank = exports.getPlayer = void 0;
+exports.index = exports.getPlayerRank = exports.getPlayer = void 0;
 const index_1 = require("../index");
 function getPlayer(req, res) {
     let PInfo;
@@ -52,6 +52,10 @@ function getPlayer(req, res) {
     });
 }
 exports.getPlayer = getPlayer;
+function index(req, res) {
+    return res.json('Digite o Nome após a / do url');
+}
+exports.index = index;
 function getPlayerRank(req, res) {
 }
 exports.getPlayerRank = getPlayerRank;

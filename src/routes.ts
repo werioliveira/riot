@@ -1,11 +1,9 @@
 import express from 'express'
 import {Router} from 'express'
-import {getPlayer} from './class/User'
+import {getPlayer, index} from './class/User'
 
 const route = Router()
-route.use('/',(req,res) =>{
-    return res.json("Digite nome de invocador após o / da url")
-})
-route.use('/:params', getPlayer)
 
+route.use('/:params', getPlayer)
+route.use('/',index)
 export default route
