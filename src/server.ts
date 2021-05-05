@@ -1,6 +1,6 @@
 require('dotenv/config');
 import express from 'express'
-const PORT = 3000 || process.env.PORT
+const PORT = process.env.PORT || 3000
 import routes from './routes'
 
 const server = express()
