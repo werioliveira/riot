@@ -9,9 +9,9 @@ export interface Player{
     puuid: string,
     profileIconId: number,
     summonerLevel: number,
-    ranking: Array<Ranking>,
-    lastMatchId: string,
-    lastMatchInfo: Object
+    ranking?: Array<Ranking>,
+    lastMatchId?: string,
+    lastMatchInfo?: Object
 }
 export interface Ranking{
     leagueId: String,

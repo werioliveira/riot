@@ -14,9 +14,11 @@ import {request, Request, Response} from 'express'
             getMatchId = getMatchId.data.info
             getRankPlayer(data.id).then(value =>{
                // data = data + value;  
+               if(value.data[1]==null){
+                   value.data[1] = []
+               }
                let rankingSolo = value.data[0]
                let rankingFlex = value.data[1]
-
                PInfo = {
                 id: data.id,
                 puuid: data.puuid,
@@ -47,7 +49,6 @@ import {request, Request, Response} from 'express'
                 lastMatchInfo: getMatchId
                 
                }
-
                 return res.json (PInfo)
             
             }).catch(err =>{

@@ -12,8 +12,12 @@ function getPlayer(req, res) {
         var getMatchId = await index_1.getMatch(matchId);
         getMatchId = getMatchId.data.info;
         index_1.getRankPlayer(data.id).then(value => {
+            if (value.data[1] == null) {
+                value.data[1] = [];
+            }
             let rankingSolo = value.data[0];
             let rankingFlex = value.data[1];
+            console.log(value);
             PInfo = {
                 id: data.id,
                 puuid: data.puuid,
