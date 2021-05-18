@@ -22,7 +22,7 @@ async function getRankPlayer(id) {
         method: 'GET',
         url: "https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + `${id}`,
         headers: {
-            'X-Riot-Token': 'RGAPI-dd63453a-1e82-49a3-846b-a0b5d80b2056',
+            'X-Riot-Token': process.env.riotkey,
         },
     });
     return result;
